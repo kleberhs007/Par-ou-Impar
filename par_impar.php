@@ -5,22 +5,28 @@
  * @copyright 2011
  */
  
- //essa funÁ„o verifica se o n˙mero È par ou Ìmpar
+ //essa fun√ß√£o verifica se o n√∫mero √© par ou √≠mpar
  
 function numPar($numero)
 {
-   echo ($numero%2==0)? '… par':'… Ìmpar';
-    
+   if (!is_numeric($numero))
+   {
+    echo 'N√£o √© n√∫mero';
+   }
+   else
+   {
+   echo ($numero%2==0)? '√â par':'√â √≠mpar';
+   } 
 }
 
-//captura do input mediante o mÈtodo POST do formul·rio da p·gina principal (index)
+//captura do input mediante o m√©todo POST do formul√°rio da p√°gina principal (index)
 
 $valor = $_POST['numero'];
 
-// executa a funÁ„o numPar e atribui o valor a uma vari·vel
+// executa a fun√ß√£o numPar e atribui o valor a uma vari√°vel
 $numero = numPar($valor);
 
-//imprime a vari·vel $numero
+//imprime a vari√°vel $numero
 echo $numero;
 
 
